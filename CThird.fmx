@@ -2,8 +2,8 @@ object W: TW
   Left = 150
   Top = 90
   Caption = 'Form3'
-  ClientHeight = 749
-  ClientWidth = 351
+  ClientHeight = 748
+  ClientWidth = 352
   Fill.Color = xFFF0C701
   Fill.Kind = Solid
   Position = Designed
@@ -632,14 +632,14 @@ object W: TW
     Align = Top
     Margins.Top = 1.000000000000000000
     Position.Y = 1.000000000000000000
-    Size.Width = 351.000000000000000000
+    Size.Width = 352.000000000000000000
     Size.Height = 240.000000000000000000
     Size.PlatformDefault = False
   end
   object Layout2: TLayout
     Align = Horizontal
     Position.Y = 538.000000000000000000
-    Size.Width = 351.000000000000000000
+    Size.Width = 352.000000000000000000
     Size.Height = 80.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -660,7 +660,7 @@ object W: TW
   object Layout1: TLayout
     Align = Top
     Position.Y = 241.000000000000000000
-    Size.Width = 351.000000000000000000
+    Size.Width = 352.000000000000000000
     Size.Height = 302.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
@@ -673,8 +673,8 @@ object W: TW
       Margins.Right = 10.000000000000000000
       Position.X = 10.000000000000000000
       Position.Y = 4.000000000000000000
-      Size.Width = 331.000000000000000000
-      Size.Height = 46.000000000000000000
+      Size.Width = 332.000000000000000000
+      Size.Height = 46.400001525878910000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Arial'
       TextSettings.Font.Size = 20.000000000000000000
@@ -689,8 +689,8 @@ object W: TW
       AutoSize = True
       StyledSettings = [FontColor]
       Position.Y = 144.000000000000000000
-      Size.Width = 351.000000000000000000
-      Size.Height = 41.000000000000000000
+      Size.Width = 352.000000000000000000
+      Size.Height = 40.800003051757810000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Arial'
       TextSettings.Font.Size = 35.000000000000000000
@@ -705,8 +705,8 @@ object W: TW
       AutoSize = True
       StyledSettings = [FontColor]
       Position.Y = 273.000000000000000000
-      Size.Width = 351.000000000000000000
-      Size.Height = 21.000000000000000000
+      Size.Width = 352.000000000000000000
+      Size.Height = 20.799987792968750000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Arial'
       TextSettings.Font.Size = 18.000000000000000000
@@ -719,8 +719,8 @@ object W: TW
   object Rectangle1: TRectangle
     Align = Bottom
     Fill.Color = claWhite
-    Position.Y = 675.000000000000000000
-    Size.Width = 351.000000000000000000
+    Position.Y = 674.000000000000000000
+    Size.Width = 352.000000000000000000
     Size.Height = 74.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = claWhite
@@ -730,7 +730,7 @@ object W: TW
       Padding.Left = 30.000000000000000000
       Padding.Right = 30.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 351.000000000000000000
+      Size.Width = 352.000000000000000000
       Size.Height = 60.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -924,7 +924,7 @@ object W: TW
               's\honestidade.png'
           end>
         Align = Right
-        Position.X = 261.000000000000000000
+        Position.X = 262.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 60.000000000000000000
         Size.PlatformDefault = False
@@ -1042,7 +1042,6 @@ object W: TW
         Size.Height = 60.000000000000000000
         Size.PlatformDefault = False
         WrapMode = Stretch
-        OnClick = Image4Click
       end
     end
   end

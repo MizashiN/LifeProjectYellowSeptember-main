@@ -5,8 +5,8 @@ program LifeProject;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  CSecond in 'CSecond.pas' {TForm2},
-  CFirst in 'CFirst.pas' {TForm1},
+  CSecond in 'CSecond.pas' {TForm1},
+  CFirst in 'CFirst.pas' {FirstForm},
   CThird in 'CThird.pas' {W};
 
 {$R *.res}
@@ -14,7 +14,7 @@ uses
 begin
   Application.Initialize;
   Application.FormFactor.Orientations := [TFormOrientation.Portrait];
-  Application.CreateForm(TW, W);
+  Application.CreateForm(TFirstForm, FirstForm);
   Application.Run;
 end.
 

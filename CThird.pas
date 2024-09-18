@@ -23,7 +23,6 @@ type
     Layout3: TLayout;
     Button1: TButton;
     procedure FormResize(Sender: TObject);
-    procedure Image4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,19 +64,5 @@ begin
   AdjustLabelsWidth(Self);
   Button1.Width := 222;
 end;
-
-procedure TW.Image4Click(Sender: TObject);
-begin
-  // Cria uma nova instância do formulário
-  CSecond := CSecond.Create(Self);
-  try
-    // Exibe o formulário de maneira modal
-    Form2.ShowModal;
-  finally
-    // Libera a memória quando o formulário é fechado
-    Form2.Free;
-  end;
-end;
-
 end.
 
