@@ -1,0 +1,51 @@
+inherited W_LgXhdpiPh: TW_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Image1: TImage
+    MultiResBitmap.Height = 346
+    MultiResBitmap.Width = 523
+    Size.Width = 450.000000000000000000
+  end
+  inherited Layout2: TLayout
+    Size.Width = 450.000000000000000000
+  end
+  inherited Layout1: TLayout
+    Size.Width = 450.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 430.000000000000000000
+      Size.Height = 251.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Label2: TLabel
+      Size.Width = 450.000000000000000000
+      Size.Height = 246.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Label3: TLabel
+      Size.Width = 450.000000000000000000
+      Size.Height = 230.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Rectangle1: TRectangle
+    Position.Y = 621.000000000000000000
+    Size.Width = 450.000000000000000000
+    inherited Layout3: TLayout
+      Size.Width = 450.000000000000000000
+      inherited Image2: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+      end
+      inherited Image3: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+        Position.X = 360.000000000000000000
+      end
+      inherited Image4: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+      end
+    end
+  end
+end

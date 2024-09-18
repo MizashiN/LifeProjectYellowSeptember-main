@@ -1,0 +1,27 @@
+program LifeProject;
+
+{$R *.dres}
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  CThird.in,
+  CSecond in 'CSecond.pas' {Form1};
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  CThird. in 'CThird..pas' {W},
+  CFirst in 'CFirst.pas' {Frame1: TFrame},
+  CThird in 'CThird.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.FormFactor.Orientations := [TFormOrientation.Portrait];
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
+
