@@ -1,5 +1,5 @@
 inherited W_XLgXhdpiTb: TW_XLgXhdpiTb
-  ClientHeight = 1256
+  ClientHeight = 1255
   ClientWidth = 800
   DesignerMasterStyle = 0
   inherited Image1: TImage
@@ -29,7 +29,7 @@ inherited W_XLgXhdpiTb: TW_XLgXhdpiTb
     end
   end
   inherited Rectangle1: TRectangle
-    Position.Y = 1182.000000000000000000
+    Position.Y = 1181.000000000000000000
     Size.Width = 800.000000000000000000
     inherited Layout3: TLayout
       Size.Width = 800.000000000000000000

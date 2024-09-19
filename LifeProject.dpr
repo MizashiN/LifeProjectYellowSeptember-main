@@ -7,7 +7,8 @@ uses
   FMX.Forms,
   CSecond in 'CSecond.pas' {TForm1},
   CFirst in 'CFirst.pas' {FirstForm},
-  CThird in 'CThird.pas' {W};
+  CThird in 'CThird.pas' {W},
+  FirstForm2 in 'FirstForm2.pas' {Form2};
 
 {$R *.res}
 

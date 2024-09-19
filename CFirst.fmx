@@ -2,34 +2,37 @@ object FirstForm: TFirstForm
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 1088
-  ClientWidth = 384
+  ClientHeight = 722
+  ClientWidth = 428
+  Position = Designed
+  StyleLookup = 'formStyle'
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  DesignerMasterStyle = 3
+  OnShow = FormShow
+  DesignerMasterStyle = 0
   object VertScrollBox1: TVertScrollBox
-    Align = Top
-    Size.Width = 384.000000000000000000
-    Size.Height = 1017.000000000000000000
+    Align = Client
+    Size.Width = 428.000000000000000000
+    Size.Height = 633.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    Viewport.Width = 379.000000000000000000
-    Viewport.Height = 1017.000000000000000000
+    Viewport.Width = 412.000000000000000000
+    Viewport.Height = 633.000000000000000000
     object Rectangle2: TRectangle
       Align = Top
       CornerType = InnerLine
       Fill.Color = xFFF0C701
-      Size.Width = 379.000000000000000000
-      Size.Height = 385.000000000000000000
+      Size.Width = 412.000000000000000000
+      Size.Height = 593.000000000000000000
       Size.PlatformDefault = False
       Stroke.Thickness = 0.000000000000000000
       Stroke.Cap = Round
       object Layout1: TLayout
         Align = Horizontal
         Position.Y = 40.000000000000000000
-        Size.Width = 379.000000000000000000
+        Size.Width = 412.000000000000000000
         Size.Height = 145.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -2448,28 +2451,27 @@ object FirstForm: TFirstForm
                 'jectYellowSeptember-main\imgs\toptitle.png'
             end>
           Align = Client
-          Size.Width = 379.000000000000000000
+          Size.Width = 412.000000000000000000
           Size.Height = 145.000000000000000000
           Size.PlatformDefault = False
         end
       end
       object Layout2: TLayout
         Align = Horizontal
-        Position.Y = 184.000000000000000000
-        Size.Width = 379.000000000000000000
-        Size.Height = 201.000000000000000000
+        Position.Y = 193.000000000000000000
+        Size.Width = 412.000000000000000000
+        Size.Height = 392.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Label1: TLabel
           Align = Horizontal
           AutoSize = True
           StyledSettings = [FontColor]
-          Position.Y = 9.000000000000000000
-          Size.Width = 379.200012207031300000
-          Size.Height = 23.200000762939450000
+          Size.Width = 412.000000000000000000
+          Size.Height = 28.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Arial'
-          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.Size = 24.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
           TextSettings.HorzAlign = Center
           Text = 'O que '#233' o Setembro Amarelo?'
@@ -2480,10 +2482,11 @@ object FirstForm: TFirstForm
           Anchors = [akLeft, akTop, akRight, akBottom]
           AutoSize = True
           StyledSettings = [Style, FontColor]
-          Size.Width = 350.399993896484400000
-          Size.Height = 110.399993896484400000
+          Size.Width = 333.000000000000000000
+          Size.Height = 249.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 18.000000000000000000
           Text = 
             'Setembro Amarelo '#233' um m'#234's dedicado a aumentar a conscientiza'#231#227'o ' +
             'sobre o suic'#237'dio e a sa'#250'de mental. '#10'Com o objetivo de reduzir o ' +
@@ -2500,44 +2503,28 @@ object FirstForm: TFirstForm
       Align = Top
       CornerType = InnerLine
       Fill.Color = xFFE2E2E2
-      Position.Y = 385.000000000000000000
-      Size.Width = 379.000000000000000000
-      Size.Height = 270.000000000000000000
+      Position.Y = 593.000000000000000000
+      Size.Width = 412.000000000000000000
+      Size.Height = 552.000000000000000000
       Size.PlatformDefault = False
       Stroke.Thickness = 0.000000000000000000
       Stroke.Cap = Round
-      object Label4: TLabel
-        Align = Top
-        AutoSize = True
-        StyledSettings = [FontColor]
-        Margins.Top = 10.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 379.000000000000000000
-        Size.Height = 23.200000762939450000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Arial'
-        TextSettings.Font.Size = 20.000000000000000000
-        TextSettings.Font.StyleExt = {00070000000000000004000000}
-        TextSettings.HorzAlign = Center
-        Text = 'Hist'#243'ria da Campanha '
-        TabOrder = 0
-      end
       object Layout4: TLayout
         Align = Top
-        Position.Y = 33.200000762939450000
-        Size.Width = 379.000000000000000000
-        Size.Height = 201.000000000000000000
+        Size.Width = 412.000000000000000000
+        Size.Height = 561.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 0
         object Label3: TLabel
           Align = Center
           AutoSize = True
           StyledSettings = [Style, FontColor]
-          Margins.Top = 20.000000000000000000
+          Margins.Top = 30.000000000000000000
           Size.Width = 328.000000000000000000
-          Size.Height = 193.600006103515600000
+          Size.Height = 456.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 18.000000000000000000
           Text = 
             'A origem do Setembro Amarelo est'#225' ligada '#224' hist'#243'ria de Mike Emme' +
             ', um jovem dos Estados Unidos conhecido por sua personalidade ca' +
@@ -2553,83 +2540,96 @@ object FirstForm: TFirstForm
             'buscar apoio.'#10
           TabOrder = 1
         end
+        object Label4: TLabel
+          Align = Horizontal
+          AutoSize = True
+          StyledSettings = [FontColor]
+          Position.Y = 22.000000000000000000
+          Size.Width = 412.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 24.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Hist'#243'ria da Campanha '
+          TabOrder = 0
+        end
       end
     end
     object Rectangle4: TRectangle
       Align = Top
       Fill.Color = xFFF0C701
-      Position.Y = 655.000000000000000000
-      Size.Width = 379.000000000000000000
-      Size.Height = 386.000000000000000000
+      Position.Y = 1145.000000000000000000
+      Size.Width = 412.000000000000000000
+      Size.Height = 800.000000000000000000
       Size.PlatformDefault = False
       Stroke.Thickness = 0.000000000000000000
-      object Label5: TLabel
-        Align = Top
-        AutoSize = True
-        StyledSettings = [FontColor]
-        Margins.Top = 10.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 379.000000000000000000
-        Size.Height = 46.400001525878910000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Arial'
-        TextSettings.Font.Size = 20.000000000000000000
-        TextSettings.Font.StyleExt = {00070000000000000004000000}
-        TextSettings.HorzAlign = Center
-        TextSettings.VertAlign = Leading
-        Text = 'Principais Fatores que Aumentam o Risco de Suic'#237'dio'
-        TabOrder = 0
-      end
       object Layout5: TLayout
         Align = Top
-        Position.Y = 56.400001525878910000
-        Size.Width = 379.000000000000000000
-        Size.Height = 273.000000000000000000
+        Size.Width = 412.000000000000000000
+        Size.Height = 801.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 0
+        object Label5: TLabel
+          Align = Horizontal
+          AutoSize = True
+          StyledSettings = [FontColor]
+          Position.Y = 33.000000000000000000
+          Size.Width = 412.000000000000000000
+          Size.Height = 51.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 22.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = ' Fatores que Aumentam o Risco de Suic'#237'dio'
+          TabOrder = 0
+        end
         object Label6: TLabel
           Align = Center
           AutoSize = True
           StyledSettings = [FontColor]
-          Margins.Top = 20.000000000000000000
+          Margins.Top = 80.000000000000000000
           Size.Width = 328.000000000000000000
-          Size.Height = 248.799987792968800000
+          Size.Height = 518.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Arial'
-          TextSettings.VertAlign = Trailing
+          TextSettings.Font.Size = 18.000000000000000000
           Text = 
-            'Transtornos Mentais: Depress'#227'o, transtornos de ansiedade e trans' +
-            'tornos bipolares.'#10'Hist'#243'rico de Tentativas de Suic'#237'dio: Aumenta o' +
-            ' risco de novas tentativas.'#10'Abuso de Subst'#226'ncias: Uso excessivo ' +
-            'de '#225'lcool e drogas.'#10'Problemas de Sa'#250'de F'#237'sica: Doen'#231'as graves e ' +
-            'cr'#244'nicas.'#10'Hist'#243'rico Familiar de Suic'#237'dio: Fatores gen'#233'ticos e am' +
-            'bientais.'#10'Isolamento Social: Falta de suporte social e conex'#245'es.' +
-            #10'Traumas e Abusos: Experi'#234'ncias de abuso f'#237'sico, emocional ou se' +
-            'xual.'#10'Estresse Relacionado a Vida: Problemas financeiros, desemp' +
-            'rego e dificuldades relacionais.'#10'Sentimentos de Desesperan'#231'a: Pe' +
-            'rcep'#231#227'o de falta de prop'#243'sito ou solu'#231#227'o para problemas.'#10'Acesso ' +
-            'a Meios Letais: Disponibilidade de armas ou medicamentos em exce' +
-            'sso.'#10
+            #8226' Transtornos Mentais: Depress'#227'o, transtornos de ansiedade e tra' +
+            'nstornos bipolares.'#10'Hist'#243'rico de Tentativas de Suic'#237'dio: Aumenta' +
+            ' o risco de novas tentativas.'#10'Abuso de Subst'#226'ncias: Uso excessiv' +
+            'o de '#225'lcool e drogas.'#10'Problemas de Sa'#250'de F'#237'sica: Doen'#231'as graves ' +
+            'e cr'#244'nicas.'#10'Hist'#243'rico Familiar de Suic'#237'dio: Fatores gen'#233'ticos e ' +
+            'ambientais.'#10'Isolamento Social: Falta de suporte social e conex'#245'e' +
+            's.'#10'Traumas e Abusos: Experi'#234'ncias de abuso f'#237'sico, emocional ou ' +
+            'sexual.'#10'Estresse Relacionado a Vida: Problemas financeiros, dese' +
+            'mprego e dificuldades relacionais.'#10'Sentimentos de Desesperan'#231'a: ' +
+            'Percep'#231#227'o de falta de prop'#243'sito ou solu'#231#227'o para problemas.'#10'Acess' +
+            'o a Meios Letais: Disponibilidade de armas ou medicamentos em ex' +
+            'cesso.'#10
           TabOrder = 1
         end
       end
     end
   end
-  object Rectangle1: TRectangle
+  object S: TRectangle
     Align = Bottom
     Fill.Color = claWhite
-    Position.Y = 1014.000000000000000000
-    Size.Width = 384.000000000000000000
-    Size.Height = 74.000000000000000000
+    Position.Y = 633.000000000000000000
+    Size.Width = 428.000000000000000000
+    Size.Height = 89.000000000000000000
     Size.PlatformDefault = False
-    Stroke.Color = claWhite
+    Stroke.Color = claNull
+    Stroke.Thickness = 0.000000000000000000
     Stroke.Cap = Round
     object Layout3: TLayout
       Align = Horizontal
       Padding.Left = 30.000000000000000000
       Padding.Right = 30.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 384.000000000000000000
+      Size.Width = 428.000000000000000000
       Size.Height = 60.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -2717,6 +2717,7 @@ object FirstForm: TFirstForm
         Size.Height = 60.000000000000000000
         Size.PlatformDefault = False
         WrapMode = Stretch
+        OnClick = Image2Click
       end
       object Image3: TImage
         MultiResBitmap.Height = 64
@@ -2823,11 +2824,12 @@ object FirstForm: TFirstForm
               's\honestidade.png'
           end>
         Align = Right
-        Position.X = 294.000000000000000000
+        Position.X = 338.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 60.000000000000000000
         Size.PlatformDefault = False
         WrapMode = Stretch
+        OnClick = Image3Click
       end
       object Image4: TImage
         MultiResBitmap.Height = 64

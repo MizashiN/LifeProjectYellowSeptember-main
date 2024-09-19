@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D,
-  FMX.Layers3D, FMX.Layouts, FMX.TabControl;
+  FMX.Layers3D, FMX.Layouts, FMX.TabControl,
+  FMX.WebBrowser;
 
 type
   TW = class(TForm)
@@ -23,6 +24,9 @@ type
     Layout3: TLayout;
     Button1: TButton;
     procedure FormResize(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,7 +46,7 @@ implementation
 {$R *.XLgXhdpiTb.fmx ANDROID}
 
 uses
- CSecond, CFirst;
+ CSecond, CFirst, FormWeb;
 
 procedure AdjustLabelsWidth(Form: TForm);
 var
@@ -59,10 +63,35 @@ begin
   end;
 end;
 
+procedure TW.Button1Click(Sender: TObject);
+begin
+  if not Assigned(Form3) then
+    Form3 := TForm3.Create(Self);
+  Form3.Show;
+end;
+
 procedure TW.FormResize(Sender: TObject);
 begin
   AdjustLabelsWidth(Self);
   Button1.Width := 222;
 end;
+procedure TW.Image3Click(Sender: TObject);
+begin
+  if not Assigned(Second) then
+    Second := TForm1.Create(Self);
+  Second.Show;
+
+    Second.VertScrollBox1.Position.Y := 0;
+end;
+
+procedure TW.Image4Click(Sender: TObject);
+begin
+  if not Assigned(FirstForm) then
+    FirstForm := TFirstForm.Create(Self);
+  FirstForm.Show;
+
+  FirstForm.VertScrollBox1.Position.Y := 0;
+end;
+
 end.
 
