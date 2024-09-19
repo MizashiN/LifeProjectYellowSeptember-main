@@ -65,11 +65,9 @@ end;
 
 procedure TW.Button1Click(Sender: TObject);
 begin
-  Form3 := TForm3.Create(nil);
-  try
-    Form3.ShowModal;  // Exibe o formulário como modal
-  finally
-    Form3r.Free;
+  if not Assigned(Form3) then
+    Form3 := TForm3.Create(Self);
+  Form3.Show;
 end;
 
 procedure TW.FormResize(Sender: TObject);

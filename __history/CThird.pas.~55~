@@ -6,8 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D,
-  FMX.Layers3D, FMX.Layouts, FMX.TabControl,  Androidapi.JNI.Net,
-  Androidapi.JNI.JavaTypes, Androidapi.Helpers, FMX.Helpers.Android,
+  FMX.Layers3D, FMX.Layouts, FMX.TabControl,
   FMX.WebBrowser;
 
 type
@@ -67,9 +66,9 @@ end;
 procedure TW.Button1Click(Sender: TObject);
 begin
 
-Form3 := TForm3.Create(nil);
-Form3.ShowModal;
-Form3.Free;
+  Form3 := TForm3.Create(Self);
+  Form3.Show;
+  Form3.Free;
 end;
 
 procedure TW.FormResize(Sender: TObject);

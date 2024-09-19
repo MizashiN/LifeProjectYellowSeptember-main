@@ -7,10 +7,11 @@ object Form3: TForm3
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnClose = FormClose
   OnShow = FormShow
   DesignerMasterStyle = 0
   object WebBrowser1: TWebBrowser
-    Align = Top
+    Align = Client
     Size.Width = 391.000000000000000000
     Size.Height = 681.000000000000000000
     Size.PlatformDefault = False
@@ -25,13 +26,14 @@ object Form3: TForm3
     Size.Height = 69.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    Text = 'ButtonClose'
+    Text = 'Fechar Navegador'
     TextSettings.Font.Family = 'Arial'
     TextSettings.Font.Size = 30.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
-    TextSettings.FontColor = claRed
-    TextSettings.FontColorForState.Pressed = claBlack
+    TextSettings.FontColor = xFF41A8C9
+    TextSettings.FontColorForState.Pressed = xFF1C5162
     TextSettings.WordWrap = True
     TextSettings.Trimming = None
+    OnClick = ButtonCloseClick
   end
 end

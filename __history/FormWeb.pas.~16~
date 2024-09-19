@@ -10,9 +10,10 @@ uses
 type
   TForm3 = class(TForm)
     WebBrowser1: TWebBrowser;
-    Close: TButton;
+    ButtonClose: TButton;
     procedure FormShow(Sender: TObject);
-    procedure CloseClick(Sender: TObject);
+    procedure ButtonCloseClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -26,9 +27,14 @@ implementation
 
 {$R *.fmx}
 
-procedure TForm3.CloseClick(Sender: TObject);
+procedure TForm3.ButtonCloseClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  WebBrowser1.Free;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);

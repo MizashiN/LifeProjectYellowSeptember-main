@@ -64,14 +64,10 @@ begin
 end;
 
 procedure TW.Button1Click(Sender: TObject);
-var
-  FormWebBrowser: TForm3;
 begin
-  FormWebBrowser := TForm3.Create(nil);
-  try
-    FormWebBrowser.ShowModal;  // Exibe o formulário como modal
-  finally
-    FormWebBrowser.Free;      // Libera a memória quando o formulário é fechado
+  if not Assigned(Form3) then
+    Form3 := TForm3.Create(Self);
+  Form3.Show;
 end;
 
 procedure TW.FormResize(Sender: TObject);

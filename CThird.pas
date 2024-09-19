@@ -65,9 +65,20 @@ end;
 
 procedure TW.Button1Click(Sender: TObject);
 begin
+  // Verifique se o formulário já foi criado
   if not Assigned(Form3) then
+  begin
     Form3 := TForm3.Create(Self);
-  Form3.Show;
+  end;
+
+  try
+    // Mostra o formulário
+    Form3.Show;
+  except
+    // Libera o formulário em caso de erro
+    FreeAndNil(Form3);
+    raise;  // Relança a exceção para tratamento posterior
+  end;
 end;
 
 procedure TW.FormResize(Sender: TObject);

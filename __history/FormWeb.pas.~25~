@@ -10,9 +10,9 @@ uses
 type
   TForm3 = class(TForm)
     WebBrowser1: TWebBrowser;
-    Close: TButton;
+    ButtonClose: TButton;
     procedure FormShow(Sender: TObject);
-    procedure CloseClick(Sender: TObject);
+    procedure ButtonCloseClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,12 +26,12 @@ implementation
 
 {$R *.fmx}
 
-procedure TForm3.CloseClick(Sender: TObject);
+procedure TForm3.ButtonCloseClick(Sender: TObject);
 begin
-  WebBrowser1.Visible := False;  // Torna o componente invisível
-  WebBrowser1.Navigate('');      // Navega para uma URL vazia
-  WebBrowser1.Free;
-
+  WebBrowser1.Stop;
+  WebBrowser1.Navigate('about:blank');
+  WebBrowser1.DisposeOf;
+  Close;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);

@@ -13,7 +13,6 @@ type
     ButtonClose: TButton;
     procedure FormShow(Sender: TObject);
     procedure ButtonCloseClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -29,12 +28,10 @@ implementation
 
 procedure TForm3.ButtonCloseClick(Sender: TObject);
 begin
-  Close;
-end;
-
-procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
+  WebBrowser1.Stop;
+  WebBrowser1.Navigate('about:blank');
   WebBrowser1.Free;
+  Close;
 end;
 
 procedure TForm3.FormShow(Sender: TObject);
