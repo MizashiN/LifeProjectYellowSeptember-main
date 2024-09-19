@@ -5,7 +5,7 @@
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Android64</Platform>
+        <Platform Condition="'$(Platform)'==''">Android</Platform>
         <TargetedPlatforms>32785</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>LifeProject.dpr</MainSource>
@@ -236,8 +236,12 @@
         <DCCReference Include="CThird.pas">
             <Form>W</Form>
         </DCCReference>
-        <DCCReference Include="FirstForm2.pas">
-            <Form>Form2</Form>
+        <DCCReference Include="FormWeb.pas">
+            <Form>Form3</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="Welcome.pas">
+            <Form>Form4</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

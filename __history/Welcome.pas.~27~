@@ -1,0 +1,84 @@
+unit Welcome;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Rectangle1: TRectangle;
+    Layout1: TLayout;
+    Label1: TLabel;
+    Button1: TButton;
+    Image1: TImage;
+    Label2: TLabel;
+    Layout2: TLayout;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ShowWelcomeScreen;
+    procedure ShowMainScreen;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  WelcomeScreenShown: Boolean = False;
+
+implementation
+
+{$R *.fmx}
+
+Uses
+CFirst;
+
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+  if not Assigned(FirstForm) then
+    FirstForm := TFirstForm.Create(Self);
+  FirstForm.Show;
+end;
+
+procedure TForm4.FormCreate(Sender: TObject);
+begin
+  if not WelcomeScreenShown then
+  begin
+    // Exibe a tela de boas-vindas
+    ShowWelcomeScreen;
+    // Marca a tela de boas-vindas como exibida
+    WelcomeScreenShown := True;
+  end
+  else
+  begin
+    // Exibe a tela principal
+    ShowMainScreen;
+  end;
+ Button1.StyledSettings := []; // Desabilita o estilo padrão
+end;
+
+procedure TForm4.ShowWelcomeScreen;
+var
+  WelcomeForm: TForm4;
+begin
+  WelcomeForm := TForm4.Create(Self);
+  try
+    WelcomeForm.Show;  // Exibe o formulário como modal
+  finally
+    WelcomeForm.Free;      // Libera a memória quando o formulário é fechado
+  end;
+end;
+
+procedure TForm1.ShowMainScreen;
+begin
+  // Código para exibir a tela principal
+end;
+
+end.

@@ -3,7 +3,7 @@ unit CFirst;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes,System.IOUtils, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Memo.Types,
   FMX.ScrollBox, FMX.Memo;
@@ -52,7 +52,6 @@ CSecond, CThird;
 
 procedure TFirstForm.FormCreate(Sender: TObject);
 begin
-
 
 Label6.Text :=    'Transtornos Mentais: Depressão, transtornos de ansiedade e transtornos bipolares.' + sLineBreak + sLineBreak +
                   'Histórico de Tentativas de Suicídio: Aumenta o risco de novas tentativas.' + sLineBreak + sLineBreak +
