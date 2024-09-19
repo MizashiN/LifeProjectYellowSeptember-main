@@ -1,0 +1,106 @@
+unit CSecond;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls,System.Math;
+
+type
+  TForm1 = class(TForm)
+    VertScrollBox1: TVertScrollBox;
+    Rectangle2: TRectangle;
+    Rectangle3: TRectangle;
+    Layout4: TLayout;
+    Label3: TLabel;
+    Label4: TLabel;
+    Rectangle1: TRectangle;
+    Layout3: TLayout;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Layout1: TLayout;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormResize(Form: TForm);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Second: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+uses
+CThird, CFirst;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+Label3.Text := 'Escutar com Empatia: Ouça sem julgamentos, oferecendo um espaço seguro para que a pessoa compartilhe seus sentimentos.' + sLineBreak + sLineBreak +
+                  'Incentivar a Busca de Ajuda: Sugira que procure um profissional de saúde mental e ajude com o processo.' + sLineBreak + sLineBreak +
+                  'Manter Contato Regular: Ofereça apoio contínuo e esteja presente na vida da pessoa.' + sLineBreak + sLineBreak +
+                  'Conhecer Sinais de Alerta: Fique atento a mudanças no comportamento e sinais de crise.' + sLineBreak + sLineBreak +
+                  'Oferecer Recursos: Compartilhe informações sobre linhas de apoio e serviços de emergência.' + sLineBreak + sLineBreak +
+                  'Eliminar Acessos a Meios Letais: Reduza o acesso a armas e medicamentos em excesso.' + sLineBreak + sLineBreak +
+                  'Encorajar a Conexão Social: Ajude a pessoa a se conectar com amigos e familiares para reduzir o isolamento.';
+
+Label1.Text :=    'CVV: Ligue para 188 ou acesse cvv.org.br para apoio emocional gratuito e sigiloso.' + sLineBreak + sLineBreak +
+                  'CAPS: Procure o Centro de Atenção Psicossocial mais próximo para atendimento especializado.' + sLineBreak + sLineBreak +
+                  'Pronto-Socorro: Busque ajuda imediata em hospitais em casos de emergência.' + sLineBreak + sLineBreak +
+                  'Profissionais de Saúde Mental: Consulte psicólogos e psiquiatras para apoio.' + sLineBreak + sLineBreak +
+                  'Aplicativos de Saúde Mental: Utilize apps para suporte e ferramentas de gestão emocional.';
+
+
+end;
+
+procedure AjustarFontesLabels(Form: TForm);
+var
+  i: Integer;
+  LabelControl: TLabel;
+  FontScale: Single;
+begin
+  // Define um fator de escala com base na largura ou altura da tela
+  FontScale := Min(Form.ClientWidth / 300, Form.ClientHeight / 600);
+  for i := 0 to Form.ComponentCount - 1 do
+  begin
+    if Form.Components[i] is TLabel then
+    begin
+      // Faz o cast para TLabel
+      LabelControl := TLabel(Form.Components[i]);
+      // Ajusta o tamanho da fonte
+      LabelControl.Font.Size := 12 * FontScale; // Exemplo, 16 é o tamanho base da fonte
+    end;
+  end;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+if Assigned(VertScrollBox1) then
+ VertScrollBox1.ViewportPosition := TPointF.Create(0, 0);
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+  if not Assigned(W) then
+    W := TW.Create(Self);
+  W.Show;
+end;
+
+procedure TForm1.Image4Click(Sender: TObject);
+begin
+  if not Assigned(FirstForm) then
+    FirstForm := TFirstForm.Create(Self);
+  FirstForm.Show;
+end;
+
+end.

@@ -1,0 +1,42 @@
+inherited Form4_LgXhdpiPh: TForm4_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited Rectangle1: TRectangle
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited Layout1: TLayout
+      Margins.Top = 100.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited Button1: TButton
+        inherited Image1: TImage
+          MultiResBitmap.Height = 64
+          MultiResBitmap.Width = 64
+        end
+      end
+      inherited Label2: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Layout3: TLayout
+        Size.Width = 450.000000000000000000
+        inherited Label1: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+    end
+    inherited Layout2: TLayout
+      Position.Y = 449.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited Label3: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Label4: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

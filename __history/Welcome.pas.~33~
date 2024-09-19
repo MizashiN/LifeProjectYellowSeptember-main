@@ -1,0 +1,55 @@
+unit Welcome;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Rectangle1: TRectangle;
+    Layout1: TLayout;
+    Label1: TLabel;
+    Button1: TButton;
+    Image1: TImage;
+    Label2: TLabel;
+    Layout2: TLayout;
+    Label3: TLabel;
+    Label4: TLabel;
+    Layout3: TLayout;
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+
+implementation
+
+{$R *.fmx}
+
+Uses
+CFirst;
+
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+  if not Assigned(FirstForm) then
+    FirstForm := TFirstForm.Create(Self);
+  FirstForm.Show;
+end;
+
+procedure TForm4.FormCreate(Sender: TObject);
+begin
+
+ Button1.StyledSettings := []; // Desabilita o estilo padrão
+end;
+
+end.

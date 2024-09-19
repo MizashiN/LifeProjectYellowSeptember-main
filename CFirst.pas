@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes,System.IOUtils, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Memo.Types,
-  FMX.ScrollBox, FMX.Memo;
+  FMX.ScrollBox, FMX.Memo, System.Math;
 
 type
   TFirstForm = class(TForm)
@@ -34,6 +34,7 @@ type
     procedure Image3Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormResize(Sender: TObject);
 
     { Private declarations }
   public
@@ -66,6 +67,31 @@ Label6.Text :=    'Transtornos Mentais: Depressão, transtornos de ansiedade e tr
                   '';
 
 
+end;
+
+procedure AjustarFontesLabels(Form: TForm);
+var
+  i: Integer;
+  LabelControl: TLabel;
+  FontScale: Single;
+begin
+  // Define um fator de escala com base na largura ou altura da tela
+  FontScale := Min(Form.ClientWidth / 300, Form.ClientHeight / 600);
+  for i := 0 to Form.ComponentCount - 1 do
+  begin
+    if Form.Components[i] is TLabel then
+    begin
+      // Faz o cast para TLabel
+      LabelControl := TLabel(Form.Components[i]);
+      // Ajusta o tamanho da fonte
+      LabelControl.Font.Size := 14 * FontScale; // Exemplo, 16 é o tamanho base da fonte
+    end;
+  end;
+end;
+
+procedure TFirstForm.FormResize(Sender: TObject);
+begin
+ AjustarFontesLabels(Self);
 end;
 
 procedure TFirstForm.FormShow(Sender: TObject);

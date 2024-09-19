@@ -8,17 +8,18 @@ object Form1: TForm1
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnResize = FormResize
   OnShow = FormShow
   DesignerMasterStyle = 3
   object VertScrollBox1: TVertScrollBox
     Align = Client
     ClipChildren = True
     Size.Width = 466.000000000000000000
-    Size.Height = 700.000000000000000000
+    Size.Height = 706.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     Viewport.Width = 461.000000000000000000
-    Viewport.Height = 700.000000000000000000
+    Viewport.Height = 706.000000000000000000
     object Rectangle2: TRectangle
       Align = Top
       CornerType = InnerLine
@@ -82,7 +83,7 @@ object Form1: TForm1
       Fill.Color = xFFE2E2E2
       Position.Y = 718.000000000000000000
       Size.Width = 461.000000000000000000
-      Size.Height = 651.000000000000000000
+      Size.Height = 657.000000000000000000
       Size.PlatformDefault = False
       Stroke.Thickness = 0.000000000000000000
       Stroke.Cap = Round
@@ -134,9 +135,9 @@ object Form1: TForm1
   object Rectangle1: TRectangle
     Align = Bottom
     Fill.Color = claWhite
-    Position.Y = 700.000000000000000000
+    Position.Y = 706.000000000000000000
     Size.Width = 466.000000000000000000
-    Size.Height = 80.000000000000000000
+    Size.Height = 74.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = claWhite
     Stroke.Cap = Round

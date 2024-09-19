@@ -1,0 +1,109 @@
+unit CThird;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Objects, FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D,
+  FMX.Layers3D, FMX.Layouts, FMX.TabControl,
+  FMX.WebBrowser;
+
+type
+  TW = class(TForm)
+    Image1: TImage;
+    Layout2: TLayout;
+    Layout1: TLayout;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Rectangle1: TRectangle;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Layout3: TLayout;
+    Button1: TButton;
+    procedure FormResize(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  W: TW;
+
+implementation
+
+{$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.GGlass.fmx ANDROID}
+{$R *.Windows.fmx MSWINDOWS}
+{$R *.Surface.fmx MSWINDOWS}
+{$R *.XLgXhdpiTb.fmx ANDROID}
+
+uses
+ CSecond, CFirst, FormWeb;
+
+procedure AdjustLabelsWidth(Form: TForm);
+var
+  ScaleFactor: Double;
+  i: Integer;
+begin
+  // Calcula o fator de escala baseado no tamanho atual da janela
+  ScaleFactor := Min(ClientWidth / 800, ClientHeight / 600); // 800x600 é a resolução base
+
+  // Ajusta o tamanho das fontes de todas as Labels
+  for i := 0 to ComponentCount - 1 do
+  begin
+    if Components[i] is TLabel then
+      TLabel(Components[i]).Font.Size := Round(12 * ScaleFactor); // 12 é o tamanho base da fonte
+  end;
+end;
+
+procedure TW.Button1Click(Sender: TObject);
+begin
+  // Verifique se o formulário já foi criado
+  if not Assigned(Form3) then
+  begin
+    Form3 := TForm3.Create(Self);
+  end;
+
+  try
+    // Mostra o formulário
+    Form3.Show;
+  except
+    // Libera o formulário em caso de erro
+    FreeAndNil(Form3);
+    raise;  // Relança a exceção para tratamento posterior
+  end;
+end;
+
+procedure TW.FormResize(Sender: TObject);
+begin
+  AdjustLabelsWidth(Self);
+  Button1.Width := 222;
+end;
+procedure TW.Image3Click(Sender: TObject);
+begin
+  if not Assigned(Second) then
+    Second := TForm1.Create(Self);
+  Second.Show;
+
+    Second.VertScrollBox1.Position.Y := 0;
+end;
+
+procedure TW.Image4Click(Sender: TObject);
+begin
+  if not Assigned(FirstForm) then
+    FirstForm := TFirstForm.Create(Self);
+  FirstForm.Show;
+
+  FirstForm.VertScrollBox1.Position.Y := 0;
+end;
+
+end.
+

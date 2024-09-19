@@ -6,12 +6,11 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Controls.Presentation, System.Math.Vectors, FMX.Controls3D,
-  FMX.Layers3D, FMX.Layouts, FMX.TabControl,
+  FMX.Layers3D, FMX.Layouts, FMX.TabControl,System.Math,
   FMX.WebBrowser;
 
 type
   TW = class(TForm)
-    Image1: TImage;
     Layout2: TLayout;
     Layout1: TLayout;
     Label1: TLabel;
@@ -23,6 +22,8 @@ type
     Image4: TImage;
     Layout3: TLayout;
     Button1: TButton;
+    VertScrollBox1: TVertScrollBox;
+    Image1: TImage;
     procedure FormResize(Sender: TObject);
     procedure Image3Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
@@ -51,14 +52,21 @@ uses
 procedure AdjustLabelsWidth(Form: TForm);
 var
   i: Integer;
+  LabelControl: TLabel;
+  FontScale: Single;
 begin
+  // Define um fator de escala com base na largura ou altura da tela
+  FontScale := Min(Form.ClientWidth / 300, Form.ClientHeight / 600); // 800x600 é a resolução base
+
+  // Percorre todos os componentes do formulário
   for i := 0 to Form.ComponentCount - 1 do
   begin
-    // Verifica se o componente é um TLabel
     if Form.Components[i] is TLabel then
     begin
-      // Ajusta a largura do TLabel
-      TLabel(Form.Components[i]).Width := Form.ClientWidth / 2;
+      // Faz o cast para TLabel
+      LabelControl := TLabel(Form.Components[i]);
+      // Ajusta o tamanho da fonte
+      LabelControl.Font.Size := 18 * FontScale; // Exemplo, 16 é o tamanho base da fonte
     end;
   end;
 end;

@@ -1,18 +1,27 @@
 inherited W_Windows: TW_Windows
   DesignerMasterStyle = 0
-  inherited Image1: TImage
-    MultiResBitmap.Height = 346
-    MultiResBitmap.Width = 523
-  end
-  inherited Layout1: TLayout
-    inherited Label1: TLabel
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
+  inherited VertScrollBox1: TVertScrollBox
+    Viewport.Width = 50.000000000000000000
+    Viewport.Height = 50.000000000000000000
+    inherited Layout1: TLayout
+      inherited Label1: TLabel
+        Size.Height = 80.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Label2: TLabel
+        Size.Height = 62.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Label3: TLabel
+        Size.Height = 80.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
     end
-    inherited Label2: TLabel
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-    end
-    inherited Label3: TLabel
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    inherited Image1: TImage
+      MultiResBitmap.Height = 346
+      MultiResBitmap.Width = 523
+      Margins.Top = 1.000000000000000000
+      Position.Y = 1.000000000000000000
     end
   end
   inherited Rectangle1: TRectangle

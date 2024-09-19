@@ -1,0 +1,51 @@
+inherited W_Surface: TW_Surface
+  ClientHeight = 1920
+  ClientWidth = 1080
+  DesignerMasterStyle = 0
+  inherited Image1: TImage
+    MultiResBitmap.Height = 346
+    MultiResBitmap.Width = 523
+    Size.Width = 1080.000000000000000000
+  end
+  inherited Layout2: TLayout
+    Size.Width = 1080.000000000000000000
+  end
+  inherited Layout1: TLayout
+    Size.Width = 1080.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 1060.000000000000000000
+      Size.Height = 106.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Label2: TLabel
+      Size.Width = 1080.000000000000000000
+      Size.Height = 101.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Label3: TLabel
+      Size.Width = 1080.000000000000000000
+      Size.Height = 85.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Rectangle1: TRectangle
+    Position.Y = 1846.000000000000000000
+    Size.Width = 1080.000000000000000000
+    inherited Layout3: TLayout
+      Size.Width = 1080.000000000000000000
+      inherited Image2: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+      end
+      inherited Image3: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+        Position.X = 990.000000000000000000
+      end
+      inherited Image4: TImage
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+      end
+    end
+  end
+end
